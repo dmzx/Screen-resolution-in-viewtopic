@@ -27,18 +27,12 @@ class listener implements EventSubscriberInterface
 
 	protected $template;
 
-	protected $phpbb_root_path;
-
-	protected $php_ext;
-
-	public function __construct(\phpbb\request\request $request, \phpbb\db\driver\driver_interface $db, \phpbb\user $user, \phpbb\template\template $template, $phpbb_root_path, $php_ext)
+	public function __construct(\phpbb\request\request $request, \phpbb\db\driver\driver_interface $db, \phpbb\user $user, \phpbb\template\template $template)
 	{
 		$this->request = $request;
 		$this->db = $db;
 		$this->user = $user;
 		$this->template = $template;
-		$this->root_path = $phpbb_root_path;
-		$this->php_ext = $php_ext;
 	}
 
 	static public function getSubscribedEvents()
@@ -110,10 +104,10 @@ class listener implements EventSubscriberInterface
 
 		if(!empty($user_res_res[0]))
 		{
-		$sql = 'UPDATE ' . USERS_TABLE . '
-			SET user_resolution = "' . $this->db->sql_escape($user_res_res[0]) . '"
-			WHERE user_id = ' . $this->user->data['user_id'];
-		$this->db->sql_query($sql);
+			$sql = 'UPDATE ' . USERS_TABLE . '
+				SET user_resolution = "' . $this->db->sql_escape($user_res_res[0]) . '"
+				WHERE user_id = ' . $this->user->data['user_id'];
+			$this->db->sql_query($sql);
 		}
 	}
 }
