@@ -1,0 +1,12 @@
+services:
+    dmzx.screenresolution.listener:
+        class: dmzx\screenresolution\event\listener
+        arguments:
+            - @request
+            - @dbal.conn
+            - @user
+            - @template
+            - %core.root_path%
+            - %core.php_ext%
+        tags:
+            - { name: event.listener }

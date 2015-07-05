@@ -1,0 +1,34 @@
+{
+	"name": "dmzx/screenresolution",
+	"type": "phpbb-extension",
+	"description": "This extension shows Screen resolution in viewtopic.",
+	"version": "1.0.0",
+	"time": "2015-07-05",
+	"keywords": ["phpbb", "extension", "screenresolution"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "dmzx",
+			"homepage": "http://www.dmzx-web.net",
+			"email": "info@dmzx-web.net",
+			"role": "Extension Developer"
+		},
+		{
+			"name": "martin",
+			"homepage": "http://www.martins-place.dyndns.info",
+			"role": "Extension Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Screen resolution in viewtopic",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-a1,<3.2.*@dev"
+		}
+	}
+}
