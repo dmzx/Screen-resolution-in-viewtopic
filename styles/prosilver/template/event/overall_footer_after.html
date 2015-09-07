@@ -4,12 +4,12 @@
 writeCookie();
 function writeCookie()
 {
-var the_date = new Date();
+	var the_date = new Date();
 	the_date.setTime(the_date.getTime()+(24*60*60*1000));
-var the_cookie_date = the_date.toGMTString();
-var the_cookie = "users_resolution="+ screen.width +"x"+ screen.height;
-var the_cookie = the_cookie + ";expires=" + the_cookie_date;
-document.cookie = the_cookie;
+	var the_cookie_date = the_date.toGMTString();
+	var the_cookie = "users_resolution="+ screen.width +"x"+ screen.height;
+	var the_cookie = the_cookie + ";expires=" + the_cookie_date;
+	document.cookie = the_cookie;
 }
 // ]]>]]&gt;<![CDATA[
 </script>

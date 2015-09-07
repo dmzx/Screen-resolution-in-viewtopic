@@ -19,14 +19,26 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 */
 class listener implements EventSubscriberInterface
 {
+	/** @var \phpbb\request\request */
 	protected $request;
 
+	/** @var \phpbb\db\driver\driver_interface */
 	protected $db;
 
+	/** @var \phpbb\user */
 	protected $user;
 
+	/** @var \phpbb\template\template */
 	protected $template;
 
+	/**
+	 * Constructor
+	 *
+	 * @param \phpbb\request\request			$request
+	 * @param \phpbb\db\driver\driver_interface	$db
+	 * @param \phpbb\user						$user
+	 * @param \phpbb\template\template			$template
+	 */
 	public function __construct(\phpbb\request\request $request, \phpbb\db\driver\driver_interface $db, \phpbb\user $user, \phpbb\template\template $template)
 	{
 		$this->request = $request;
