@@ -2,6 +2,7 @@
 	"name": "dmzx/screenresolution",
 	"type": "phpbb-extension",
 	"description": "This extension shows Screen resolution in viewtopic.",
+	"homepage": "http://www.dmzx-web.net",
 	"version": "1.0.0",
 	"time": "2015-07-05",
 	"keywords": ["phpbb", "extension", "screenresolution"],
